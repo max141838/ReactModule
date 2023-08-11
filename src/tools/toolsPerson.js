@@ -1,5 +1,4 @@
  function Remake (props) {
-    console.log(props)
     let {itemName,pic} = props
     let classItem = 'card'
     return(

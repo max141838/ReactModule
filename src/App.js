@@ -11,7 +11,7 @@ const App = () => {
                 setUsers(value)
                 console.log(value)
             });
-    });
+    },[]);
 
 
     return (
@@ -19,13 +19,13 @@ const App = () => {
         <h1>Hello</h1>
             <Remake
             itemName={'Eric'}
-            pic={'https://southpark.fandom.com/wiki/File:Constabe_Eric_Cartman.png'}/>
+            pic={'https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg'}/>
             <Remake
             itemName={'Kyle Broflovski'}
             pic={'https://static.wikia.nocookie.net/southpark/images/4/4c/HighJewElfKing.transparent.png/revision/latest?cb=20190411032218'}/>
 
             {
-                users.map(value => <UserCom name={value.name} email={value.email} />)
+                users.map(value => <UserCom key={value.id} name={value.name} email={value.email} />)
             }
 
 
