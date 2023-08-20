@@ -2,6 +2,8 @@ import React, {useEffect, useState} from 'react';
 import './App.css'
 import Remake from "./tools/toolsPerson";
 import UserCom from "./tools/userCom";
+import Counter from "./tools/Counter";
+import ClassCounter from "./tools/ClassCounter";
 const App = () => {
     let [users,setUsers] = useState([]);
     useEffect( () => {
@@ -12,6 +14,13 @@ const App = () => {
                 console.log(value)
             });
     },[]);
+
+const [value,setValue] = useState('write here');
+
+
+
+
+
 
 
     return (
@@ -27,6 +36,14 @@ const App = () => {
             {
                 users.map(value => <UserCom key={value.id} name={value.name} email={value.email} />)
             }
+
+            <Counter/>
+            <Counter/>
+            <Counter/>
+            <Counter/>
+            <h1>{value}</h1>
+            <input type={"text"} value={value} onChange={event => setValue(event.target.value)}/>
+            <ClassCounter/>
 
 
         </div>
