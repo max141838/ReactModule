@@ -2,3 +2,28 @@
     background: slateblue;
     min-height: 100px;
 }
+
+#root{
+    display: flex;
+    justify-content: center;
+}
+
+
+.App{
+    width: 800px;
+}
+
+.post{
+    display: flex;
+    padding: 15px;
+    border: 2px solid lawngreen;
+    margin-top: 15px;
+    justify-content: space-between;
+    align-items: center;
+}
+.text{
+    align-items: center;
+
+}
+
+

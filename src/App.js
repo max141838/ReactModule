@@ -4,6 +4,7 @@ import Remake from "./tools/toolsPerson";
 import UserCom from "./tools/userCom";
 import Counter from "./tools/Counter";
 import ClassCounter from "./tools/ClassCounter";
+import Postitem from "./tools/Postitem";
 const App = () => {
     let [users,setUsers] = useState([]);
     useEffect( () => {
@@ -16,7 +17,11 @@ const App = () => {
     },[]);
 
 const [value,setValue] = useState('write here');
-
+const [post,setPost] = useState([
+    {id:1,title:'JavaScript',body:'Decripthion'},
+    {id:2,title:'JavaScript 2',body:'Decripthion 1'},
+    {id:2,title:'JavaScript 3',body:'Decripthion 5'}
+])
 
 
 
@@ -44,6 +49,21 @@ const [value,setValue] = useState('write here');
             <h1>{value}</h1>
             <input type={"text"} value={value} onChange={event => setValue(event.target.value)}/>
             <ClassCounter/>
+
+            <div className='App'>
+                <h1 className='text'>Text Subject</h1>
+                {
+                    post.map((post) => <Postitem post={post} key={post.id}/>)
+                }
+
+            </div>
+
+
+
+
+
+
+
 
 
         </div>
