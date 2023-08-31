@@ -5,6 +5,7 @@ import UserCom from "./tools/userCom";
 import Counter from "./tools/Counter";
 import ClassCounter from "./tools/ClassCounter";
 import Postitem from "./tools/Postitem";
+import PostList from "./tools/PostList";
 const App = () => {
     let [users,setUsers] = useState([]);
     useEffect( () => {
@@ -19,9 +20,14 @@ const App = () => {
 const [value,setValue] = useState('write here');
 const [post,setPost] = useState([
     {id:1,title:'JavaScript',body:'Decripthion'},
-    {id:2,title:'JavaScript 2',body:'Decripthion 1'},
-    {id:2,title:'JavaScript 3',body:'Decripthion 5'}
+    {id:2,title:'React',body:'Decripthion 1'},
+    {id:2,title:'Node.js',body:'Decripthion 5'}
 ])
+    const [post2,setPost2] = useState([
+        {id:1,title:'Python',body:'Decripthion'},
+        {id:2,title:'Flask',body:'Decripthion 1'},
+        {id:2,title:'Django',body:'Decripthion 5'}
+    ])
 
 
 
@@ -51,11 +57,8 @@ const [post,setPost] = useState([
             <ClassCounter/>
 
             <div className='App'>
-                <h1 className='text'>Text Subject</h1>
-                {
-                    post.map((post) => <Postitem post={post} key={post.id}/>)
-                }
-
+               <PostList post={post} title={'programmer application and language-1'}/>
+                <PostList post={post2} title={'programmer application and language-2'}/>
             </div>
 
 
