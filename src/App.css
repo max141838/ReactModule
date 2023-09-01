@@ -24,4 +24,13 @@
 .Texts{
     text-align: center;
 }
+.petro{
+    width: 80%;
+    margin: 5px;
+    border: 2px solid black;
+    padding: 5px 15px;
+}
+
+
+
 

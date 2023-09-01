@@ -6,6 +6,8 @@ import Counter from "./tools/Counter";
 import ClassCounter from "./tools/ClassCounter";
 import Postitem from "./tools/Postitem";
 import PostList from "./tools/PostList";
+import MyButton from "./Ul/button/MyButton";
+import MyInput from "./Ul/input/MyInput";
 const App = () => {
     let [users,setUsers] = useState([]);
     useEffect( () => {
@@ -57,6 +59,11 @@ const [post,setPost] = useState([
             <ClassCounter/>
 
             <div className='App'>
+                <form>
+                    <input className='petro' type='text' placeholder='name object'/>
+                    <MyInput type='text' placeholder='description object'/>
+                    <MyButton>Add object</MyButton>
+                </form>
                <PostList post={post} title={'programmer application and language-1'}/>
                 <PostList post={post2} title={'programmer application and language-2'}/>
             </div>
